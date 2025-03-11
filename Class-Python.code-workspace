@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../FunCode"
+		}
+	],
+    "settings": {
+        "editor.overtypeOnPaste": false
+    }
+}
