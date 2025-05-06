@@ -41,10 +41,11 @@ def move_right(event):
     canvas.move(rectangle, MOVE_DISTANCE, 0)
 # Start the Tkinter event loop
 
+'''
 for x in range(100):
     canvas.move(rectangle, MOVE_DISTANCE, 0)
     print(f'moved, {x}')
-
+'''
 
 
 #FIXME HACK TODO XXX These are code comments

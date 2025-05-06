@@ -1,5 +1,9 @@
 {
     "python.analysis.typeCheckingMode": "basic",
     "python.REPL.enableREPLSmartSend": false,
-    "editor.overtypeOnPaste": false
+    "editor.overtypeOnPaste": false,
+    "files.associations": {
+        "vector": "cpp",
+        "array": "cpp"
+    }
 }
