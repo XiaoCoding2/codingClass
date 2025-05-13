@@ -3,21 +3,17 @@ def display_board(board):
     print("-" * 9)
 
 def check_winner(board, player):
-    return any( # any-func start
-        all( # all-func start
-            cell == player
-            for cell in row
-        ) or all( # all-func end + or all-func start
-            board[i][col] == player
-            for i in range(3)
-        ) for col, row in enumerate(board) # all-func end + for-loop above all-funcs'
-        ) or all( # any-func end + or all-func start
+    return any(
+        all(cell == player for cell in row) or
+        all(board[i][col] == player for i in range(3))
+        for col, row in enumerate(board)
+        ) or all(
             board[i][i] == player
             for i in range(3)
-        ) or all( # all-func end + or all-func start
+        ) or all(
             board[i][2 - i] == player
             for i in range(3)
-        ) # all-func end
+        )
 
 def is_full(board):
     return all(cell != " " for row in board for cell in row)
