@@ -4,6 +4,7 @@
     "editor.overtypeOnPaste": false,
     "files.associations": {
         "vector": "cpp",
-        "array": "cpp"
+        "array": "cpp",
+        "iostream": "cpp"
     }
 }
