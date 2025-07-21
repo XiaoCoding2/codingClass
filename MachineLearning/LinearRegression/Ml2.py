@@ -16,8 +16,8 @@ def error(w,b,x,y):
 x_vals=[]
 y_vals=[]
 z_vals=[]
-for w in range(1,101):
-    for b in range(1,101):
+for w in range(1,1001):
+    for b in range(1,1001):
         w_s=w/10
         b_s=b/10
         x_vals.append(w_s)
