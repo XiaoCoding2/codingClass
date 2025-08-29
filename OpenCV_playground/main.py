@@ -30,6 +30,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 WIN = "Corner‑Lab (Esc to quit)"
 cv2.namedWindow(WIN)
 
+
 fps=0
 init_max_corners=200
 init_quality_pct=2
@@ -41,11 +42,11 @@ cv2.createTrackbar("minDist", WIN, init_min_dist, 30, nothing)
 lower = np.array([50, 100, 50])
 upper = np.array([70, 255, 255])
 while (True):
-    start=time.perf_counter()
+    #start=time.perf_counter()
     (ret, frame)=cap.read() #ret=bool if can use webcam
     if (not ret):
         break
-    cv2.imshow("webcam",frame)
+    #cv2.imshow("webcam",frame)
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) #NOTE
     red_mask = cv2.inRange(hsv, lower, upper)
     gray2 = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -84,15 +85,15 @@ while (True):
     #HERSHEY_SIMPLEX
     #vis=np.hstack((gray2, edges2, corners))
     cv2.imshow("green", frame)
-    cv2.imshow("gray2",gray2)
-    cv2.imshow("edges2",edges2)
-    cv2.imshow("corners",annotated)
+    #cv2.imshow("gray2",gray2)
+    #cv2.imshow("edges2",edges2)
+    #cv2.imshow("corners",annotated)
     #cv2.imshow(WIN,vis)
     if (cv2.waitKey(1) & 0xFF == 27):
         break
-    end=time.perf_counter()
-    one_frame=end-start
-    fps=1//one_frame
+    #end=time.perf_counter()
+    #one_frame=end-start
+    #fps=1//one_frame
 
 cap.release()
 cv2.destroyAllWindows()
